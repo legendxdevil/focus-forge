@@ -1,0 +1,1 @@
+{"name":"FocusForge","short_name":"FocusForge","description":"A productivity app that works offline: Pomodoro, Notes, Tasks, and more.","start_url":".","display":"standalone","background_color":"#ffffff","theme_color":"#FF9933","lang":"en","scope":"/","icons":[{"src":"logo.svg","sizes":"192x192","type":"image/svg+xml"},{"src":"logo.svg","sizes":"512x512","type":"image/svg+xml"}]}
