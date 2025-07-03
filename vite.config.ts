@@ -6,11 +6,34 @@ import manifest from './manifest.json'
 export default defineConfig({
   plugins: [
     react(),
+    // --- PWA plugin for offline and installable app ---
     VitePWA({
       registerType: 'autoUpdate',
-      manifest: manifest as Partial<import('vite-plugin-pwa').ManifestOptions>,
+      manifest: {
+        name: 'FocusForge',
+        short_name: 'FocusForge',
+        start_url: '.',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#3b82f6',
+        icons: [
+          {
+            src: 'icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3,wav}'],
+      },
+      devOptions: {
+        enabled: true
       }
     })
   ],
